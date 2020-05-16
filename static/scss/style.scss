@@ -1,0 +1,45 @@
+body {
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: magenta;
+}
+.item {
+    justify-content: center;
+}
+/* -------------------------------- 
+
+File#: _1_feature-v6
+Title: Feature v6
+Descr: A section containing a list of features
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.feature-v6 {
+}
+
+.feature-v6__item {
+    margin: 20px;
+    img {
+        display: block;
+        width: 100%;
+        margin-bottom: var(--space-sm);
+    }
+}
+.main-image {
+    width: 100%;
+    height: 20em;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://sun9-19.userapi.com/c855416/v855416336/1c042f/2WuoWb63mw4.jpg");
+    img {
+        transform: translate(0, -20%);
+        width: 100%;
+    }
+}
+// --img-sm -> set max-width for images
