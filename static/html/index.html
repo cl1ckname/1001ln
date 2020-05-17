@@ -11,18 +11,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/codyhouse-framework/main/assets/js/util.js"></script>
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <script src="../js/stacking.js"></script>
+    <title>DiploDok</title>
 </head>
 
 <body>
     <div class="main-image"></div>
 
-    <nav class="navbar navbar-expand-sm navbar-light header">
+    <nav class="header navbar navbar-expand-sm navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container-fluid justify-content-center">
             <div class="navbar-header row">
-                
+
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
@@ -40,56 +44,127 @@
             </div>
     </nav>
 
+    <section class="diagonal-section bg-contrast-lower"
+        style="background-image: url('https://images.unsplash.com/photo-1551016038-5687e313f6a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1477&q=80');margin-top: 5em;margin-bottom: 5em;">
+        <div class="container max-width-adaptive-sm padding-y-xxl">
+            <div class="text-center">
+                <div class="text-sm opacity-60% margin-bottom-xxs">This is a Label</div>
 
-    <div class="container-fluid d-flex" style = "z-index: 0;">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-sm-12 col-lg-4">
-                <div class="feature-v6__item">
-                    <img src="https://st.depositphotos.com/2363887/2571/i/450/depositphotos_25711965-stock-photo-t-rex-skeleton-on-white.jpg" alt="Image description">
-                    <div class="text-component">
-                        <h4>Рентген</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium assumenda doloribus eos
-                            provident modi.</p>
-                        <p><a href="#0">Learn more</a></p>
-                    </div>
+                <div class="text-component margin-bottom-sm">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vero aliquam, natus quae
+                        architecto hic quod!</p>
                 </div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-lg-4">
-                <div class="feature-v6__item">
-                    <img src="https://codyhouse.co/app/assets/img/feature-v6-img-5.svg" alt="Image description">
-                    <div class="text-component">
-                        <h4>Feature Two</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium assumenda doloribus eos
-                            provident modi.</p>
-                        <p><a href="#0">Learn more</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-lg-4">
-                <div class="feature-v6__item">
-                    <img src="https://codyhouse.co/app/assets/img/feature-v6-img-5.svg" alt="Image description">
-                    <div class="text-component">
-                        <h4>Feature One</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium assumenda doloribus eos
-                            provident modi.</p>
-                        <p><a href="#0">Learn more</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-lg-4">
-                <div class="feature-v6__item">
-                    <img src="https://codyhouse.co/app/assets/img/feature-v6-img-5.svg" alt="Image description">
-                    <div class="text-component">
-                        <h4>Feature Two</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium assumenda doloribus eos
-                            provident modi.</p>
-                        <p><a href="#0">Learn more</a></p>
-                    </div>
+
+                <div class="flex flex-wrap flex-center gap-sm">
+                    <a href="#0" class="btn btn--primary">Download</a>
+                    <a href="#0" class="color-inherit">Learn more</a>
                 </div>
             </div>
         </div>
+    </section>
+
+    <div class="container-fluid d-flex" style="z-index: 0;">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12 col-lg-4">
+                <a class="card-v2 radius-md" href="#0">
+                    <figure>
+                        <img src="https://st.depositphotos.com/2363887/2571/i/450/depositphotos_25711965-stock-photo-t-rex-skeleton-on-white.jpg"
+                            alt="Image description">
+                        <figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
+                            <div class="text-md text-base@md">Card Title</div>
+                            <div class="margin-top-xxxs text-sm opacity-70%">Label</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4">
+                <a class="card-v2 radius-md" href="#0">
+                    <figure>
+                        <img src="https://st.depositphotos.com/2363887/2571/i/450/depositphotos_25711965-stock-photo-t-rex-skeleton-on-white.jpg"
+                            alt="Image description">
+                        <figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
+                            <div class="text-md text-base@md">Card Title</div>
+                            <div class="margin-top-xxxs text-sm opacity-70%">Label</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4">
+                <a class="card-v2 radius-md" href="#0">
+                    <figure>
+                        <img src="https://st.depositphotos.com/2363887/2571/i/450/depositphotos_25711965-stock-photo-t-rex-skeleton-on-white.jpg"
+                            alt="Image description">
+                        <figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
+                            <div class="text-md text-base@md">Card Title</div>
+                            <div class="margin-top-xxxs text-sm opacity-70%">Label</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4">
+                <a class="card-v2 radius-md" href="#0">
+                    <figure>
+                        <img src="https://st.depositphotos.com/2363887/2571/i/450/depositphotos_25711965-stock-photo-t-rex-skeleton-on-white.jpg"
+                            alt="Image description">
+                        <figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
+                            <div class="text-md text-base@md">Card Title</div>
+                            <div class="margin-top-xxxs text-sm opacity-70%">Label</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4">
+                <a class="card-v2 radius-md" href="#0">
+                    <figure>
+                        <img src="https://st.depositphotos.com/2363887/2571/i/450/depositphotos_25711965-stock-photo-t-rex-skeleton-on-white.jpg"
+                            alt="Image description">
+                        <figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
+                            <div class="text-md text-base@md">Card Title</div>
+                            <div class="margin-top-xxxs text-sm opacity-70%">Label</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-4">
+                <a class="card-v2 radius-md" href="#0">
+                    <figure>
+                        <img src="https://st.depositphotos.com/2363887/2571/i/450/depositphotos_25711965-stock-photo-t-rex-skeleton-on-white.jpg"
+                            alt="Image description">
+                        <figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
+                            <div class="text-md text-base@md">Card Title</div>
+                            <div class="margin-top-xxxs text-sm opacity-70%">Label</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="col-12">
+                <ul class="stack-cards js-stack-cards">
+                    <li class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+                        <div class="flex flex-center">Card One</div>
+                    </li>
+    
+                    <li class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+                        <div class="flex flex-center">Card Two</div>
+                    </li>
+    
+                    <li class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+                        <div class="flex flex-center">Card Three</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <h1>Design</h1>
-</body>
+    
+    <div class="container-fluid footer">
+        <div class="row text-center">
+            <div class="col-9">
+                <h2 class="display-4">Socials</h2>
+            </div>
+            <div class="col-1"><i class="fab fa-vk"></i></div>
+            <div class="col-1"><i class="fab fa-instagram"></i></div>
+            <div class="col-1"><i class="fab fa-tumblr"></i></div>
+        </div>
+    </div>
 
 </html>
