@@ -5455,63 +5455,6 @@ mark {
   border-radius: var(--radius-md);
   padding: var(--space-xs); }
 
-body {
-  justify-content: center;
-  align-items: center; }
-
-.item {
-  justify-content: center; }
-
-/* ---------------------------------
-
-File#: _1_feature-v6
-Title: Feature v6
-Descr: A section containing a list of features
-Usage: codyhouse.co/license
-
--------------------------------- */
-.feature-v6__item {
-  margin: 20px;
-  background-color: whitesmoke;
-  width: 100%; }
-  .feature-v6__item img {
-    display: block;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: var(--space-sm); }
-
-.main-image {
-  width: 100%;
-  height: 30vh;
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 100% 30vh;
-  background-image: url("/img/hero.jpg"); }
-  .main-image img {
-    height: 100%; }
-
-.header {
-  font-size: 2em;
-  position: -webkit-sticky !important;
-  position: sticky !important;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 0.1em 0.3em 0px rgba(0, 0, 0, 0.3);
-  background-color: #080E73; }
-  .header a {
-    color: white !important; }
-
-.footer {
-  background-color: lightblue;
-  box-shadow: 0 -0.2em 0.3em 0px rgba(0, 0, 0, 0.3); }
-  .footer i {
-    font-size: 3.5vw;
-    margin-top: 10%; }
-  .footer h2 {
-    color: white; }
-
 /* -------------------------------- 
 
 File#: _1_card-v2
@@ -5614,5 +5557,69 @@ Usage: codyhouse.co/license
     left: 0;
     width: 100%;
     height: 100%; }
+
+/* ---------------------------------
+
+File#: _1_feature-v6
+Title: Feature v6
+Descr: A section containing a list of features
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.feature-v6__item {
+  margin: 20px;
+  background-color: whitesmoke;
+  width: 100%; }
+  .feature-v6__item img {
+    display: block;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: var(--space-sm); }
+
+body {
+  justify-content: center;
+  align-items: center; }
+
+.item {
+  justify-content: center; }
+
+.main-image {
+  width: 100%;
+  height: 30vh;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 30vh;
+  background-image: url("/img/hero.jpg"); }
+  .main-image img {
+    height: 100%; }
+
+.header {
+  font-size: 2em;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0.1em 0.3em 0px rgba(0, 0, 0, 0.3);
+  background-color: #080e73; }
+  .header a {
+    color: white !important; }
+
+.footer {
+  background-color: lightblue;
+  box-shadow: 0 -0.2em 0.3em 0px rgba(0, 0, 0, 0.3);
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+  @media screen {
+    .footer i {
+      font-size: 2em;
+      padding-top: 1em;
+      padding-bottom: 1em; } }
+  @media screen and (max-width: 412px) {
+    .footer i {
+      font-size: 1.5em; } }
+  .footer h2 {
+    color: white; }
 
 /*# sourceMappingURL=style.min.css.map */

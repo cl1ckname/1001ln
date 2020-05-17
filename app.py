@@ -19,6 +19,6 @@ def do_login():
     return template('static/html/result.html',first=first,seconde=second)
 
 if os.environ.get('APP_LOCATION') == 'heroku':
-    run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    run(host="0.0.0.0", port=argv[1])
 else:
     run(host='localhost', port=8080, debug=True)

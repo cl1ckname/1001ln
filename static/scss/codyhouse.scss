@@ -1,0 +1,156 @@
+@import "../../node_modules/codyhouse-framework/main/assets/css/base";
+@import "../../node_modules/codyhouse-framework/main/assets/css/custom-style";
+
+/* -------------------------------- 
+
+File#: _1_card-v2
+Title: Card v2
+Descr: Container of information used as teasers for further content, often displayed in a gallery of related items
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.card-v2 {
+    margin-bottom: 1em;
+    position: relative;
+    overflow: hidden;
+    border: gray solid 1px;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.card-v2__caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(alpha(var(--color-black), 0), alpha(var(--color-black), 1));
+    background-blend-mode: multiply;
+
+    color: var(--color-white);
+    text-shadow: 0 1px 1px rgba(#000, 0.35);
+    @include fontSmooth;
+}
+
+// --blurred-img
+.card-v2--blur-fx {
+    .card-v2__caption {
+        background: alpha(var(--color-black), 0.8);
+        backdrop-filter: blur(10px);
+    }
+}
+
+// --link
+a.card-v2 {
+    display: block;
+    text-decoration: none;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+        box-shadow: var(--shadow-md);
+    }
+}
+
+/* -------------------------------- 
+
+File#: _1_diagonal-section
+Title: Diagonal Section
+Descr: Section with diagonal edges
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+:root {
+    --diagonal-section-offset: 50px;
+}
+
+.diagonal-section {
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: whitesmoke;
+    h1 {
+        color: whitesmoke;
+    }
+    a {
+        color: whitesmoke;
+    }
+}
+
+@supports (clip-path: inset(50%)) {
+    .diagonal-section,
+    .diagonal-section-top.diagonal-section-bottom {
+        padding-top: calc(var(--diagonal-section-offset) / 2);
+        padding-bottom: calc(var(--diagonal-section-offset) / 2);
+        clip-path: polygon(
+            0% 0%,
+            100% var(--diagonal-section-offset),
+            100% 100%,
+            0% calc(100% - var(--diagonal-section-offset))
+        );
+    }
+}
+/* -------------------------------- 
+
+File#: _1_stacking-cards
+Title: Stacking Cards
+Descr: Cards stack effect on vertical scrolling
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.stack-cards {
+    --stack-cards-gap: var(--space-sm); // cards gap on scrolling
+    margin-right: 5%;
+    margin-left: 5%;
+    :nth-child(odd) {
+        div{
+            background-color: lightblue;
+        }
+    }
+    :last-child{
+        margin-bottom: 5em;
+    }
+}
+
+.stack-cards__item {
+    position: relative; // fallback for browsers not supporting sticky position
+    position: sticky;
+    top: var(--space-md); // cards top position when they get fixed
+    height: 0;
+    padding-bottom: 50%; // 18:9 aspect ratio
+    transform-origin: center top;
+
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+/* ---------------------------------
+
+File#: _1_feature-v6
+Title: Feature v6
+Descr: A section containing a list of features
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.feature-v6__item {
+    margin: 20px;
+    background-color: whitesmoke;
+    width: 100%;
+    img {
+        display: block;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: var(--space-sm);
+    }
+}
