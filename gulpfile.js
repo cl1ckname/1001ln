@@ -9,14 +9,16 @@ var browserSync = require("browser-sync").create();
 
 function Sync(done) {
     browserSync.init({
-        srever: {
-            baseDir: "./"
+        server: {
+            baseDir: "./static",
+            index: "./html/index.html"
         },
         host: 'localhost',
         port: 9000,
-        serveStatic: ["./static"],
+        // serveStatic: ["./static"],
+        open: false,
     });
-    gulp.watch('.static/html/*.html').on("change",browserSync.reload);
+    gulp.watch('./static/html/*.html').on("change",browserSync.reload);
     gulp.watch('./static/scss/*.scss').on('change',css_style);
     done();
 }

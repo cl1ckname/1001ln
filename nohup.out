@@ -1,0 +1,44 @@
+Bottle v0.12.18 server starting up (using WSGIRefServer())...
+Listening on http://93.124.34.49:8080/
+Hit Ctrl-C to quit.
+
+Traceback (most recent call last):
+  File "app.py", line 20, in <module>
+    run(host='93.124.34.49',port=8080)
+  File "/home/clickname/projects/1000ln_part2/env/lib/python3.8/site-packages/bottle.py", line 3137, in run
+    server.run(app)
+  File "/home/clickname/projects/1000ln_part2/env/lib/python3.8/site-packages/bottle.py", line 2789, in run
+    srv = make_server(self.host, self.port, app, server_cls, handler_cls)
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 154, in make_server
+    server = server_class((host, port), handler_class)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 99] Cannot assign requested address
+Bottle v0.12.18 server starting up (using WSGIRefServer())...
+Listening on http://93.124.34.49:8080/
+Hit Ctrl-C to quit.
+
+Traceback (most recent call last):
+  File "app.py", line 20, in <module>
+    run(host='93.124.34.49',port=8080)
+  File "/home/clickname/projects/1000ln_part2/env/lib/python3.8/site-packages/bottle.py", line 3137, in run
+    server.run(app)
+  File "/home/clickname/projects/1000ln_part2/env/lib/python3.8/site-packages/bottle.py", line 2789, in run
+    srv = make_server(self.host, self.port, app, server_cls, handler_cls)
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 154, in make_server
+    server = server_class((host, port), handler_class)
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 99] Cannot assign requested address

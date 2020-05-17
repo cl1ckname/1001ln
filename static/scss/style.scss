@@ -8,7 +8,7 @@ h1 {
 .item {
     justify-content: center;
 }
-/* -------------------------------- 
+/* ---------------------------------
 
 File#: _1_feature-v6
 Title: Feature v6
@@ -16,9 +16,6 @@ Descr: A section containing a list of features
 Usage: codyhouse.co/license
 
 -------------------------------- */
-
-.feature-v6 {
-}
 
 .feature-v6__item {
     margin: 20px;
@@ -30,16 +27,23 @@ Usage: codyhouse.co/license
 }
 .main-image {
     width: 100%;
-    height: 20em;
-    overflow: hidden;
+    height: 30vh;
+    //overflow: hidden;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("https://thumbs.dreamstime.com/z/%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0-%D0%B2-%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B5-%D0%B8%D0%BD%D0%BE%D0%B7%D0%B0%D0%B2%D1%80%D0%BE%D0%B2-%D0%B2-%D1%80%D1%8F-44845438.jpg");
+    background-size: 100% 30vh;
+    background-image: url("/img/hero.jpg");
     img {
-        margin-bottom: 40%;
-        width: 100%;
+        height: 100%;
     }
 }
-// --img-sm -> set max-width for images
+.header{
+    font-size: 2em; 
+    position: sticky; 
+    top: 0; z-index: 999; 
+    background-color: lightblue; 
+    a{
+        color:wheat;
+    }
+}
