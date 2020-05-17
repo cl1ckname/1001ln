@@ -1,4 +1,5 @@
 from bottle import route, run, template, static_file, get, request
+import os
 @route('/')
 def index():
     return template('static/html/index.html')
