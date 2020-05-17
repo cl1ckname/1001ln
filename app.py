@@ -17,4 +17,7 @@ def do_login():
     second = request.forms.get('password')
     return template('static/html/result.html',first=first,seconde=second)
 
-run(host='93.124.34.49',port=8080)
+if os.environ.get('APP_LOCATION') == 'heroku':
+    run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+else:
+    run(host='localhost', port=8080, debug=True)
