@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/static/css/style.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/style.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/d10cb4befc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/codyhouse-framework/main/assets/js/util.js"></script>
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <script src="../js/scroller.js"></script>
+    <title>DiploDok</title>
+</head>
+
+<body>
+    <div class="main-image"></div>
+
+    <nav class="header navbar navbar-expand-sm navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid justify-content-center">
+            <div class="navbar-header row">
+
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item item col-md-4">
+                            <a class="nav-link" href="/">Главная</a>
+                        </li>
+                        <li class="nav-item item col-md-4">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item item col-md-4">
+                            <a class="nav-link" href="/test">Тест</a>  
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+    <!-- ----------------------------------------------------- -->
+    <div class="container-fluid justify-content-center text-center">
+        <div class="banner container max-width-adaptive-lg radius-md overflow-hidden test-banner">
+            <a href="#targetId" class="text-decoration-none" aria-label="Shop Now">
+                <div class="grid flex-row-reverse@md">
+                    <div class="col-6@md overflow-hidden" aria-hidden="true">
+                        <div class="banner__figure width-100%"
+                            style="background-image: url(https://images.unsplash.com/photo-1574165425594-7090f32cea9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);">
+                        </div>
+                    </div>
+
+                    <div class="col-6@md">
+                        <div class="text-component v-space-md height-100% flex flex-column padding-md padding-lg@md">
+                            <h2>Какой ты динозавр?</h2>
+                            <p class="margin-top-sm margin-top-lg@md"><span class="banner__link"><i>Начать тест</i></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <h2 id="targetId">Тест</h2>
+        <div class="row justify-content-center forms">
+            <div class="container-fluid col-lg-8 col-sm-12 col-12 form-box">
+                <form method="POST" action="/result">
+                    <fieldset class="margin-bottom-md">
+                        <legend class="form-legend">Custom Radio Buttons2</legend>
+
+                        <ul class="flex flex-wrap gap-md justify-content-center">
+                            <li>
+                                <input type="radio" name="radio-button" id="radio-1" checked>
+                                <label for="radio-1">Choice 1</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="radio-button" id="radio-2">
+                                <label for="radio-2">Choice 2</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="radio-button" id="radio-3">
+                                <label for="radio-3">Choice 3</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset class="margin-bottom-md">
+                        <legend class="form-legend">Custom Radio Buttons3</legend>
+
+                        <ul class="flex flex-wrap gap-md justify-content-center">
+                            <li>
+                                <input type="radio" name="radio-button1" id="radio-1" checked>
+                                <label for="radio-1">Choice 1</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="radio-button1" id="radio-2">
+                                <label for="radio-2">Choice 2</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="radio-button1" id="radio-3">
+                                <label for="radio-3">Choice 3</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset class="margin-bottom-md">
+                        <legend class="form-legend">Custom Radio Buttons3</legend>
+
+                        <ul class="flex flex-wrap gap-md justify-content-center">
+                            <li>
+                                <input type="radio" name="radio-button2" id="radio-1" value="1" checked>
+                                <label for="radio-1">Choice 1</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="radio-button2" id="radio-2" value="2">
+                                <label for="radio-2">Choice 2</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="radio-button2" id="radio-3" value="3">
+                                <label for="radio-3">Choice 3</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <input type="submit">
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer">
+        <div class="row mr-0 ml-0">
+            <div class="col-4 text-center"><i class="fab fa-vk"></i></div>
+            <div class="col-4 text-center"><i class="fab fa-instagram"></i></div>
+            <div class="col-4 text-center"><i class="fab fa-tumblr"></i></div>
+        </div>
+    </div>
+</body>

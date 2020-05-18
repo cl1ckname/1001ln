@@ -5577,6 +5577,160 @@ Usage: codyhouse.co/license
     margin-right: 5%;
     margin-bottom: var(--space-sm); }
 
+/* -------------------------------- 
+
+File#: _1_banner
+Title: Banner
+Descr: A CTA banner containing text + media
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.banner {
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-sm);
+  transition: .3s; }
+  .banner:hover {
+    box-shadow: var(--shadow-md); }
+
+.banner__link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: 0.3s var(--ease-out);
+  transform-origin: left bottom; }
+  .banner__link i {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    transition: 0.3s var(--ease-out); }
+  .banner__link::after {
+    content: '';
+    background-color: currentColor;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s var(--ease-out);
+    opacity: 0.15; }
+
+.banner__figure {
+  height: 0;
+  padding-bottom: 50%;
+  transition: 0.3s var(--ease-out);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.banner:hover .banner__link {
+  transform: scale(1.3); }
+  .banner:hover .banner__link i {
+    transform: scale(0.7); }
+  .banner:hover .banner__link::after {
+    height: 100%; }
+
+.banner:hover .banner__figure {
+  transform: scale(1.05); }
+
+@media (min-width: 64rem) {
+  .banner__figure {
+    height: 100%;
+    padding-bottom: 0;
+    -webkit-clip-path: polygon(100px 0%, 100% 0%, 100% 100%, 50px 100%);
+    clip-path: polygon(100px 0%, 100% 0%, 100% 100%, 50px 100%); }
+  .banner--invert .banner__figure {
+    -webkit-clip-path: polygon(0% 0%, calc(100% - 100px) 0%, calc(100% - 50px) 100%, 0% 100%);
+    clip-path: polygon(0% 0%, calc(100% - 100px) 0%, calc(100% - 50px) 100%, 0% 100%); }
+  .banner--invert .banner__link {
+    transform-origin: right bottom; }
+  .banner:hover .banner__figure {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); } }
+
+/* -------------------------------- 
+
+File#: _1_radios-checkboxes
+Title: Radios and Checkboxes
+Descr: Custom radio and checkbox buttons
+Usage: codyhouse.co/license
+
+-------------------------------- */
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='radio'] {
+    --active: #275EFE;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .3);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background .3s, border-color .3s, box-shadow .2s; }
+    input[type='radio']:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s); }
+    input[type='radio']:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: .3s;
+      --d-t: .6s;
+      --d-t-e: cubic-bezier(.2, .85, .32, 1.2); }
+    input[type='radio']:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: .9; }
+      input[type='radio']:disabled:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border); }
+      input[type='radio']:disabled + label {
+        cursor: not-allowed; }
+    input[type='radio']:hover:not(:checked):not(:disabled) {
+      --bc: var(--border-hover); }
+    input[type='radio']:focus {
+      box-shadow: 0 0 0 var(--focus); }
+    input[type='radio']:not(.switch) {
+      width: 21px; }
+      input[type='radio']:not(.switch):after {
+        opacity: var(--o, 0); }
+      input[type='radio']:not(.switch):checked {
+        --o: 1; }
+    input[type='radio'] + label {
+      font-size: 14px;
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 4px; }
+  input[type='radio'] {
+    border-radius: 50%; }
+    input[type='radio']:after {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      transform: scale(var(--s, 0.7)); }
+    input[type='radio']:checked {
+      --s: .5; } }
+
 body {
   justify-content: center;
   align-items: center; }
@@ -5621,5 +5775,17 @@ body {
       font-size: 1.5em; } }
   .footer h2 {
     color: white; }
+
+.test-banner {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  background-color: lightblue;
+  padding-right: 0 !important; }
+
+.form-box {
+  font-size: 1.5em;
+  box-shadow: 0 0 0.5em 0px rgba(0, 0, 0, 0.3);
+  margin-top: 2em;
+  margin-bottom: 2em; }
 
 /*# sourceMappingURL=style.min.css.map */
