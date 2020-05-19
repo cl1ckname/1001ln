@@ -36,14 +36,14 @@ body {
     box-shadow: 0 -0.2em 0.3em 0px rgba(0, 0, 0, 0.3);
     padding-left: 0 !important;
     padding-right: 0 !important;
-    @media screen{
+    @media screen {
         i {
             font-size: 2em;
             padding-top: 1em;
             padding-bottom: 1em;
         }
     }
-    @media screen and (max-width: 412px){
+    @media screen and (max-width: 412px) {
         i {
             font-size: 1.5em;
         }
@@ -52,15 +52,64 @@ body {
         color: white;
     }
 }
-.test-banner{
+.footer-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-banner {
     margin-top: 3em;
     margin-bottom: 3em;
     background-color: lightblue;
     padding-right: 0 !important;
 }
-.form-box{
+.form-box {
     font-size: 1.5em;
     box-shadow: 0 0 0.5em 0px rgba(0, 0, 0, 0.3);
     margin-top: 2em;
     margin-bottom: 2em;
+}
+.grad-link-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 4em;
+    background: linear-gradient(-45deg, white 70%, lightblue 30%);
+    background-size: 700%;
+    border-radius: 10px;
+    transition: 0.5s;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        transition: 0.5s;
+    }
+    &:hover {
+        background-position: 40% 40%;
+        a {
+            color: lightblue;
+        }
+    }
+}
+.title {
+    color: white;
+    text-shadow: 0px 0px 2px rgba(56, 56, 56, 1);
+    margin-top: 0.7em;
+    margin-bottom: 0.6em;
+    font-size: 4em;
+}
+.text-inside{
+    width: 100%;
+    text-align: right;
+}
+.image-text{
+    position: relative;
+    margin: auto;
+    width: 90vmin;
+    height: calc(90vmin * 9 / 16);
+    top: calc(90vmin * -9 / 16);;
+    text-align: right;
+    z-index: 4;
 }
