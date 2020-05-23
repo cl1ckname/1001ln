@@ -1,16 +1,12 @@
-from bottle import route, run, template, static_file, get, request
+from bottle import route, run, static_file, get, request
+from lib import *
 from sys import argv
 from ml import solve
 import os
 
-d = {
-    1: ('Диплодок', 'https://img3.goodfon.com/original/2560x1440/5/4c/kinder-syurpriz-igrushka-trava.jpg'),
-    2: ('Тиранозавр','https://im0-tub-ru.yandex.net/i?id=48782499d25bb29dbd75adc029f31d78&n=13'),
-    3: ('Антоха Карцев','https://sun9-18.userapi.com/c849020/v849020892/39b41/BIc2v6uq9eo.jpg')}
-
 @route('/')
 def index():
-    return template('static/html/index.html')
+    return template('static/html/index.html', 'DiploDoc')
 
 @route('/other')
 def other():
@@ -18,7 +14,11 @@ def other():
 
 @route('/test')
 def test():
-    return template('static/html/test.html')
+    return template('static/html/test.html', 'Тест')
+
+@route('/doctors')
+def doctors():
+    return template('static/html/doctors.html', 'Наши врачи')
 
 @get("/static/css/<filepath:re:.*\.css>")
 def css(filepath):
@@ -29,8 +29,15 @@ def do_login():
     first = int(request.forms.get('radio-button'))
     second = int(request.forms.get('radio-button1'))
     third = int(request.forms.get('radio-button2'))
-    answer = d[int(solve(first,second,third)[0])]
-    return template('static/html/result.html',answer=answer[0],adress=answer[1])
+    n = int(solve(first,second,third)[0])
+    answer = d[n]
+    print(n,answer)
+
+    return template('static/html/result.html','Результат',answer=answer[0],adress=answer[1], describe=answer[2])
+
+@route('/result')
+def bad_res():
+    return template('static/html/result.html','Уйди',answer='Хакер',adress='https://cs.pikabu.ru/post_img/2013/10/27/11/1382897680_599400827.jpg')
 
 if os.environ.get('APP_LOCATION') == 'heroku':
     run(host="0.0.0.0", port=argv[1])

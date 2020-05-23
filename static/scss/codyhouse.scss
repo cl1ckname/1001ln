@@ -11,46 +11,46 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 .card-v2 {
-  margin-bottom: 1em;
-  position: relative;
-  overflow: hidden;
-  border: gray solid 1px;
+	margin-bottom: 1em;
+	position: relative;
+	overflow: hidden;
+	border: gray solid 1px;
 
-  img {
-    display: block;
-    width: 100%;
-  }
+	img {
+		display: block;
+		width: 100%;
+	}
 }
 
 .card-v2__caption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: linear-gradient(alpha(var(--color-black), 0), alpha(var(--color-black), 1));
-  background-blend-mode: multiply;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: linear-gradient(alpha(var(--color-black), 0), alpha(var(--color-black), 1));
+	background-blend-mode: multiply;
 
-  color: var(--color-white);
-  text-shadow: 0 1px 1px rgba(#000, 0.35);
-  @include fontSmooth;
+	color: var(--color-white);
+	text-shadow: 0 1px 1px rgba(#000, 0.35);
+	@include fontSmooth;
 }
 
 // --blurred-img
 .card-v2--blur-fx {
-  .card-v2__caption {
-    background: alpha(var(--color-black), 0.8);
-    backdrop-filter: blur(10px);
-  }
+	.card-v2__caption {
+		background: alpha(var(--color-black), 0.8);
+		backdrop-filter: blur(10px);
+	}
 }
 
 // --link
 a.card-v2 {
-  display: block;
-  text-decoration: none;
-  transition: box-shadow 0.2s;
+	display: block;
+	text-decoration: none;
+	transition: box-shadow 0.2s;
 
-  &:hover {
-    box-shadow: var(--shadow-md);
-  }
+	&:hover {
+		box-shadow: var(--shadow-md);
+	}
 }
 
 /* -------------------------------- 
@@ -63,36 +63,36 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 :root {
-  --diagonal-section-offset: 50px;
+	--diagonal-section-offset: 50px;
 }
 
 .diagonal-section {
-  position: relative;
-  z-index: 1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: whitesmoke;
-  h1 {
-    color: whitesmoke;
-  }
-  a {
-    color: whitesmoke;
-  }
+	position: relative;
+	z-index: 1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: whitesmoke;
+	h1 {
+		color: whitesmoke;
+	}
+	a {
+		color: whitesmoke;
+	}
 }
 
 @supports (clip-path: inset(50%)) {
-  .diagonal-section,
-  .diagonal-section-top.diagonal-section-bottom {
-    padding-top: calc(var(--diagonal-section-offset) / 2);
-    padding-bottom: calc(var(--diagonal-section-offset) / 2);
-    clip-path: polygon(
-      0% 0%,
-      100% var(--diagonal-section-offset),
-      100% 100%,
-      0% calc(100% - var(--diagonal-section-offset))
-    );
-  }
+	.diagonal-section,
+	.diagonal-section-top.diagonal-section-bottom {
+		padding-top: calc(var(--diagonal-section-offset) / 2);
+		padding-bottom: calc(var(--diagonal-section-offset) / 2);
+		clip-path: polygon(
+			0% 0%,
+			100% var(--diagonal-section-offset),
+			100% 100%,
+			0% calc(100% - var(--diagonal-section-offset))
+		);
+	}
 }
 /* -------------------------------- 
 
@@ -104,34 +104,34 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 .stack-cards {
-  --stack-cards-gap: var(--space-sm); // cards gap on scrolling
-  margin-right: 5%;
-  margin-left: 5%;
-  :nth-child(odd) {
-    div {
-      background-color: lightblue;
-    }
-  }
-  :last-child {
-    margin-bottom: 5em;
-  }
+	--stack-cards-gap: var(--space-sm); // cards gap on scrolling
+	margin-right: 5%;
+	margin-left: 5%;
+	:nth-child(odd) {
+		div {
+			background-color: lightblue;
+		}
+	}
+	:last-child {
+		margin-bottom: 5em;
+	}
 }
 
 .stack-cards__item {
-  position: relative; // fallback for browsers not supporting sticky position
-  position: sticky;
-  top: var(--space-md); // cards top position when they get fixed
-  height: 0;
-  padding-bottom: 50%; // 18:9 aspect ratio
-  transform-origin: center top;
+	position: relative; // fallback for browsers not supporting sticky position
+	position: sticky;
+	top: var(--space-md); // cards top position when they get fixed
+	height: 0;
+	padding-bottom: 50%; // 18:9 aspect ratio
+	transform-origin: center top;
 
-  > * {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+	> * {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 }
 /* ---------------------------------
 
@@ -143,16 +143,16 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 .feature-v6__item {
-  margin: 20px;
-  background-color: whitesmoke;
-  width: 100%;
-  img {
-    display: block;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: var(--space-sm);
-  }
+	margin: 20px;
+	background-color: whitesmoke;
+	width: 100%;
+	img {
+		display: block;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom: var(--space-sm);
+	}
 }
 
 /* -------------------------------- 
@@ -165,97 +165,97 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 .banner {
-  position: relative;
-  z-index: 1;
-  box-shadow: var(--shadow-sm);
-  transition: 0.3s;
+	position: relative;
+	z-index: 1;
+	box-shadow: var(--shadow-sm);
+	transition: 0.3s;
 
-  &:hover {
-    box-shadow: var(--shadow-md);
-  }
+	&:hover {
+		box-shadow: var(--shadow-md);
+	}
 }
 
 .banner__link {
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-  transition: 0.3s var(--ease-out);
-  transform-origin: left bottom;
+	position: relative;
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+	transition: 0.3s var(--ease-out);
+	transform-origin: left bottom;
 
-  i {
-    // label
-    position: relative;
-    z-index: 2;
-    display: inline-block;
-    transition: 0.3s var(--ease-out);
-  }
+	i {
+		// label
+		position: relative;
+		z-index: 2;
+		display: inline-block;
+		transition: 0.3s var(--ease-out);
+	}
 
-  &::after {
-    // animated border
-    content: "";
-    background-color: currentColor;
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    transition: 0.3s var(--ease-out);
-    opacity: 0.15;
-  }
+	&::after {
+		// animated border
+		content: "";
+		background-color: currentColor;
+		height: 2px;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		transition: 0.3s var(--ease-out);
+		opacity: 0.15;
+	}
 }
 
 .banner__figure {
-  height: 0;
-  padding-bottom: 50%;
-  transition: 0.3s var(--ease-out);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	height: 0;
+	padding-bottom: 50%;
+	transition: 0.3s var(--ease-out);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 // link animation + image scale up animation
 .banner:hover {
-  .banner__link {
-    transform: scale(1.3);
+	.banner__link {
+		transform: scale(1.3);
 
-    i {
-      transform: scale(0.7); // reverse parent transformation
-    }
+		i {
+			transform: scale(0.7); // reverse parent transformation
+		}
 
-    &::after {
-      height: 100%;
-    }
-  }
+		&::after {
+			height: 100%;
+		}
+	}
 
-  .banner__figure {
-    transform: scale(1.05);
-  }
+	.banner__figure {
+		transform: scale(1.05);
+	}
 }
 
 @include breakpoint(md) {
-  .banner__figure {
-    height: 100%;
-    padding-bottom: 0;
-    clip-path: polygon(100px 0%, 100% 0%, 100% 100%, 50px 100%);
-  }
+	.banner__figure {
+		height: 100%;
+		padding-bottom: 0;
+		clip-path: polygon(100px 0%, 100% 0%, 100% 100%, 50px 100%);
+	}
 
-  // invert variation
-  .banner--invert {
-    .banner__figure {
-      clip-path: polygon(0% 0%, calc(100% - 100px) 0%, calc(100% - 50px) 100%, 0% 100%);
-    }
+	// invert variation
+	.banner--invert {
+		.banner__figure {
+			clip-path: polygon(0% 0%, calc(100% - 100px) 0%, calc(100% - 50px) 100%, 0% 100%);
+		}
 
-    .banner__link {
-      transform-origin: right bottom;
-    }
-  }
+		.banner__link {
+			transform-origin: right bottom;
+		}
+	}
 
-  .banner:hover .banner__figure {
-    // clip animation - visible on big screens
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
+	.banner:hover .banner__figure {
+		// clip animation - visible on big screens
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	}
 }
 /* -------------------------------- 
 
@@ -267,208 +267,105 @@ Usage: codyhouse.co/license
 -------------------------------- */
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
-  input[type="radio"] {
-    --active: #275efe;
-    --active-inner: #fff;
-    --focus: 2px rgba(39, 94, 254, 0.3);
-    --border: #bbc1e1;
-    --border-hover: #275efe;
-    --background: #fff;
-    --disabled: #f6f8ff;
-    --disabled-inner: #e1e6f9;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    height: 21px;
-    outline: none;
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    margin: 0;
-    cursor: pointer;
-    border: 1px solid var(--bc, var(--border));
-    background: var(--b, var(--background));
-    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
-    &:after {
-      content: "";
-      display: block;
-      left: 0;
-      top: 0;
-      position: absolute;
-      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
-    }
-    &:checked {
-      --b: var(--active);
-      --bc: var(--active);
-      --d-o: 0.3s;
-      --d-t: 0.6s;
-      --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
-    }
-    &:disabled {
-      --b: var(--disabled);
-      cursor: not-allowed;
-      opacity: 0.9;
-      &:checked {
-        --b: var(--disabled-inner);
-        --bc: var(--border);
-      }
-      & + label {
-        cursor: not-allowed;
-      }
-    }
-    &:hover {
-      &:not(:checked) {
-        &:not(:disabled) {
-          --bc: var(--border-hover);
-        }
-      }
-    }
-    &:focus {
-      box-shadow: 0 0 0 var(--focus);
-    }
-    &:not(.switch) {
-      width: 21px;
-      &:after {
-        opacity: var(--o, 0);
-      }
-      &:checked {
-        --o: 1;
-      }
-    }
-    & + label {
-      font-size: 14px;
-      line-height: 21px;
-      display: inline-block;
-      vertical-align: top;
-      cursor: pointer;
-      margin-left: 4px;
-    }
-  }
-  input[type="radio"] {
-    border-radius: 50%;
-    &:after {
-      width: 19px;
-      height: 19px;
-      border-radius: 50%;
-      background: var(--active-inner);
-      opacity: 0;
-      transform: scale(var(--s, 0.7));
-    }
-    &:checked {
-      --s: 0.5;
-    }
-  }
+	input[type="radio"] {
+		--active: #275efe;
+		--active-inner: #fff;
+		--focus: 2px rgba(39, 94, 254, 0.3);
+		--border: #bbc1e1;
+		--border-hover: #275efe;
+		--background: #fff;
+		--disabled: #f6f8ff;
+		--disabled-inner: #e1e6f9;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		height: 21px;
+		outline: none;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		margin: 0;
+		cursor: pointer;
+		border: 1px solid var(--bc, var(--border));
+		background: var(--b, var(--background));
+		transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+		&:after {
+			content: "";
+			display: block;
+			left: 0;
+			top: 0;
+			position: absolute;
+			transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+		}
+		&:checked {
+			--b: var(--active);
+			--bc: var(--active);
+			--d-o: 0.3s;
+			--d-t: 0.6s;
+			--d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+		}
+		&:disabled {
+			--b: var(--disabled);
+			cursor: not-allowed;
+			opacity: 0.9;
+			&:checked {
+				--b: var(--disabled-inner);
+				--bc: var(--border);
+			}
+			& + label {
+				cursor: not-allowed;
+			}
+		}
+		&:hover {
+			&:not(:checked) {
+				&:not(:disabled) {
+					--bc: var(--border-hover);
+				}
+			}
+		}
+		&:focus {
+			box-shadow: 0 0 0 var(--focus);
+		}
+		&:not(.switch) {
+			width: 21px;
+			&:after {
+				opacity: var(--o, 0);
+			}
+			&:checked {
+				--o: 1;
+			}
+		}
+		& + label {
+			font-size: 14px;
+			line-height: 21px;
+			display: inline-block;
+			vertical-align: top;
+			cursor: pointer;
+			margin-left: 4px;
+		}
+	}
+	input[type="radio"] {
+		border-radius: 50%;
+		&:after {
+			width: 19px;
+			height: 19px;
+			border-radius: 50%;
+			background: var(--active-inner);
+			opacity: 0;
+			transform: scale(var(--s, 0.7));
+		}
+		&:checked {
+			--s: 0.5;
+		}
+	}
 }
 // ------------------------------------------------
-
-  .c {
-    position: relative;
-    width: 90vmin;
-    height: calc(90vmin * 9 / 16);
-    margin: auto;
-    overflow: hidden;
-    z-index: 5;
-    //box-shadow: 0 1.25em 1em -0.5em #0005;
-  }
-
-  .i {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-  }
-
-  .img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: 0% 50%;
-    transition: transform 1s;
-
-    .c:hover & {
-      transform: translateX(-3%);
-      transition-duration: 5s;
-    }
-  }
-
-  :root {
-    --s1-w: 40vmin;
-    --s2-w: 60vmin;
-    --s3-w: 10vmin;
-  }
-
-  @keyframes move-x {
-    50% {
-      transform: translateX(var(--x1));
-    }
-    100% {
-      transform: translateX(var(--x2));
-    }
-  }
-
-  .s1,
-  .s2,
-  .s3 {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    animation: gg 0.5s ease-out forwards;
-    pointer-events: none;
-
-    .c:hover & {
-      animation-name: move-x;
-    }
-  }
-
-  .s1 {
-    text-align: right;
-    content: "121";
-    left: 100%;
-    z-index: 2;
-    width: var(--s1-w);
-    //background-color: #fff;
-    mix-blend-mode: difference;
-
-    --x1: -110vmin;
-    --x2: -50vmin;
-  }
-
-  .s2 {
-    z-index: 3;
-    width: calc(var(--s2-w) * 2);
-    left: calc(100% + var(--s1-w));
-    background-color: #fff;
-
-    --x1: -110vmin;
-    --x2: -90vmin;
-  }
-
-  .s3 {
-    z-index: 3;
-    width: 10vmin;
-    right: 100%;
-    background-color: #fff;
-    animation-delay: 0.1s;
-
-    --x1: 0;
-    --x2: 95%;
-  }
-
-  //////
-
-  h1 {
-    text-align: center;
-  }
-
-  .info {
-    align-self: flex-end;
-    margin: 3rem 1rem 1rem;
-    text-align: right;
-    font-size: 0.85em;
-    font-style: italic;
-    font-family: serif;
-    opacity: 0.75;
-
-    a {
-      color: inherit;
-    }
-  }
-
+.doctors {
+	padding-left: 2em;
+	padding-right: 2em;
+	justify-content: center;
+	&:nth-child(1) {
+		section {
+			background: lightblue;
+		}
+	}
+}

@@ -17,46 +17,24 @@
     <title>DiploDok</title>
 </head>
 
-<body>
-    <div class="main-image"></div>
-
-    <nav class="header navbar navbar-expand-sm navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="container-fluid justify-content-center">
-            <div class="navbar-header row">
-
-
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item item col-md-4">
-                            <a class="nav-link" href="/">Главная</a>
-                        </li>
-                        <li class="nav-item item col-md-4">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item item col-md-4">
-                            <a class="nav-link" href="#">Тест</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-    </nav>
+<body class="text-center justify-content-center">
     <h1 class="text-xlll title"> Результат </h1>
     <div class="result-image">
-        <div class="c">
-            <div class="i"><img class="img" src={{adress}} /></div>
-            <div class="s1">
-            </div>
-            <div class="s2">
-                <div class="image-text"> 
-                    avbvvcfjgkghvcfhcghjfghj<br>
-                    j;knbvtuyjgvvvghh
-                </div>
-            </div>
-            <div class="s3"></div>
-        </div>
+        <section class = "collage">
+            <img src="{{args['adress']}}" alt="">
+            <article>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </article>
+        </section>
+    <h1 class = "title">Ты {{args['answer']}}</h1>
+
+    <div class="describe-card">
+        <h1>Описание</h1>
+        <p>{{args['describe']}}</p>
     </div>
-    <h1 class = "title">Ты {{answer}}</h1>
+</div>
 </body>
