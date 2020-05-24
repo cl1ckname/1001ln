@@ -59,7 +59,14 @@ body {
     justify-content: center;
     align-items: center;
 }
+.text-sticky{
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+    > h1{
+        font-size: 2em;
+        color: white;
+    }
 
+}
 .test-banner {
     margin-top: 3em;
     margin-bottom: 3em;

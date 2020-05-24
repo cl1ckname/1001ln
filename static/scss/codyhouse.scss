@@ -26,21 +26,15 @@ Usage: codyhouse.co/license
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background: linear-gradient(alpha(var(--color-black), 0), alpha(var(--color-black), 1));
-	background-blend-mode: multiply;
-
+	// background: linear-gradient(alpha(var(--color-black), 0), alpha(var(--color-black), 1));
+	// background-blend-mode: multiply;
+	font-size: 2em;
 	color: var(--color-white);
 	text-shadow: 0 1px 1px rgba(#000, 0.35);
 	@include fontSmooth;
 }
 
-// --blurred-img
-.card-v2--blur-fx {
-	.card-v2__caption {
-		background: alpha(var(--color-black), 0.8);
-		backdrop-filter: blur(10px);
-	}
-}
+
 
 // --link
 a.card-v2 {
@@ -112,9 +106,9 @@ Usage: codyhouse.co/license
 			background-color: lightblue;
 		}
 	}
-	:last-child {
-		margin-bottom: 5em;
-	}
+	// :last-child {
+	// 	margin-bottom: 5em;
+	// }
 }
 
 .stack-cards__item {
@@ -124,6 +118,9 @@ Usage: codyhouse.co/license
 	height: 0;
 	padding-bottom: 50%; // 18:9 aspect ratio
 	transform-origin: center top;
+	> div{
+		background-size: cover;
+	}
 
 	> * {
 		position: absolute;

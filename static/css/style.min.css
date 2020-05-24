@@ -5476,17 +5476,11 @@ Usage: codyhouse.co/license
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0), hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 1));
-  background-blend-mode: multiply;
+  font-size: 2em;
   color: var(--color-white);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-
-.card-v2--blur-fx .card-v2__caption {
-  background: hsla(var(--color-black-h), var(--color-black-s), var(--color-black-l), 0.8);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px); }
 
 a.card-v2 {
   display: block;
@@ -5540,8 +5534,6 @@ Usage: codyhouse.co/license
   margin-left: 5%; }
   .stack-cards :nth-child(odd) div {
     background-color: lightblue; }
-  .stack-cards :last-child {
-    margin-bottom: 5em; }
 
 .stack-cards__item {
   position: relative;
@@ -5551,6 +5543,8 @@ Usage: codyhouse.co/license
   height: 0;
   padding-bottom: 50%;
   transform-origin: center top; }
+  .stack-cards__item > div {
+    background-size: cover; }
   .stack-cards__item > * {
     position: absolute;
     top: 0;
@@ -5789,6 +5783,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.text-sticky {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3); }
+  .text-sticky > h1 {
+    font-size: 2em;
+    color: white; }
 
 .test-banner {
   margin-top: 3em;
