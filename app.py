@@ -4,6 +4,10 @@ from sys import argv
 from ml import solve
 import os
 
+@get('/favicon.ico')
+def favicon():
+    return static_file('favicon.ico','static/img/')
+
 @route('/')
 def index():
     return template('static/html/index.html', 'DiploDoc')
