@@ -5732,6 +5732,88 @@ Usage: codyhouse.co/license
   .doctors:nth-child(1) section {
     background: lightblue; }
 
+/* -------------------------------- 
+
+File#: _1_list
+Title: List
+Descr: Custom list component
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.list, .text-component .list {
+  --list-v-space: 1;
+  --list-offset: 1;
+  padding-left: 0;
+  list-style: none; }
+  .list ul, .list ol, .text-component .list ul, .text-component .list ol {
+    list-style: none;
+    margin: 0;
+    margin-top: calc( var(--space-xxxs) * var(--list-v-space, 1));
+    padding-top: calc( var(--space-xxxs) * var(--list-v-space, 1));
+    padding-left: calc(var(--space-xs) * var(--list-offset, 1)); }
+  .list li, .text-component .list li {
+    padding-bottom: calc( var(--space-xxxs) * var(--list-v-space, 1));
+    margin-bottom: calc( var(--space-xxxs) * var(--list-v-space, 1)); }
+  .list > li:last-child, .list ul > li:last-child, .list ol > li:last-child, .text-component .list > li:last-child, .text-component .list ul > li:last-child, .text-component .list ol > li:last-child {
+    margin-bottom: 0; }
+  .list:not(.list--border) > li:last-child, .list ul > li:last-child, .list ol > li:last-child, .text-component .list:not(.list--border) > li:last-child, .text-component .list ul > li:last-child, .text-component .list ol > li:last-child {
+    padding-bottom: 0; }
+
+.list--ul li, .list--ol li {
+  padding-left: calc(var(--bullet-size) + var(--bullet-margin-right)); }
+
+.list--ul li::before, .list--ol li::before {
+  width: var(--bullet-size);
+  height: var(--bullet-size);
+  margin-left: calc(var(--bullet-size) * -1);
+  display: inline-flex;
+  vertical-align: middle;
+  position: relative;
+  left: calc(var(--bullet-margin-right) * -1); }
+
+.list--ul {
+  --bullet-size: 7px;
+  --bullet-margin-right: var(--space-xxs); }
+  .list--ul li::before {
+    content: '';
+    border-radius: 50%;
+    color: var(--color-primary);
+    background-color: currentColor;
+    border: 2px solid currentColor; }
+  .list--ul ul li::before {
+    background-color: transparent; }
+
+.list--ol {
+  --bullet-size: 26px;
+  --bullet-margin-right: 6px;
+  counter-reset: list-items; }
+  .list--ol li {
+    counter-increment: list-items; }
+  .list--ol ol {
+    counter-reset: list-items; }
+  .list--ol li::before {
+    content: counter(list-items);
+    font-size: 0.75em;
+    justify-content: center;
+    align-items: center;
+    top: -0.1em;
+    border-radius: 50%;
+    background-color: var(--color-contrast-lower);
+    border: 2px solid var(--color-contrast-lower);
+    color: var(--color-contrast-high);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .list--ol ol li::before {
+    background-color: transparent; }
+
+.list--border li {
+  border-bottom: 1px solid var(--color-contrast-low); }
+
+.list--border ul, .list--border ol {
+  border-top: 1px solid var(--color-contrast-low); }
+  .list--border ul li:last-child, .list--border ol li:last-child {
+    border-bottom-width: 0; }
+
 body {
   justify-content: center;
   align-items: center; }
@@ -5743,10 +5825,10 @@ body {
   width: 100%;
   height: 30vh;
   background-attachment: fixed;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 30vh;
-  background-image: url("https://psv4.userapi.com/c856432/u192263455/docs/d2/51437d5d36eb/1.jpg?extra=SkPKVeZRykFf3lQRl7iNhVIE2eKIA1xamHaLeqbab_FWotLtEpDuWHHwXfVsYPUBdjNUucIA7IHBizx8pPiVmGJ1yaM1e9K0TLWhXjC0GL9lGV6VwiyxkaDaDDpEvnJcvLuaapVvhas5XQAdLle9onhe"); }
+  background-size: 100% auto;
+  background-image: url("https://images.unsplash.com/photo-1561328399-f94d2ce78679?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"); }
   .main-image img {
     height: 100%; }
 
@@ -5822,6 +5904,10 @@ body {
     .grad-link-block:hover a {
       color: lightblue; }
 
+form {
+  padding-top: 1em;
+  padding-bottom: 1em; }
+
 .title {
   color: white;
   text-shadow: 0px 0px 2px #383838;
@@ -5862,6 +5948,8 @@ body {
   padding: 1em;
   border: solid 2px black;
   text-align: justify; }
+  .describe-card > p {
+    font-size: 1.5em; }
   .describe-card h1 {
     text-align: center; }
 

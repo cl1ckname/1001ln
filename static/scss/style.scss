@@ -12,10 +12,10 @@ body {
     height: 30vh;
     //overflow: hidden;
     background-attachment: fixed;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 30vh;
-    background-image: url("https://psv4.userapi.com/c856432/u192263455/docs/d2/51437d5d36eb/1.jpg?extra=SkPKVeZRykFf3lQRl7iNhVIE2eKIA1xamHaLeqbab_FWotLtEpDuWHHwXfVsYPUBdjNUucIA7IHBizx8pPiVmGJ1yaM1e9K0TLWhXjC0GL9lGV6VwiyxkaDaDDpEvnJcvLuaapVvhas5XQAdLle9onhe");
+    background-size: 100% auto;
+    background-image: url("https://images.unsplash.com/photo-1561328399-f94d2ce78679?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
     img {
         height: 100%;
     }
@@ -59,13 +59,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-.text-sticky{
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
-    > h1{
+.text-sticky {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+    > h1 {
         font-size: 2em;
         color: white;
     }
-
 }
 .test-banner {
     margin-top: 3em;
@@ -101,6 +100,10 @@ body {
             color: lightblue;
         }
     }
+}
+form {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 //----------------------------------------------------------
 .title {
@@ -139,7 +142,7 @@ body {
         grid-column: 2 / 4;
     }
 }
-.describe-card{
+.describe-card {
     width: 80%;
     margin: auto;
     border-radius: 0.5em;
@@ -147,11 +150,14 @@ body {
     padding: 1em;
     border: solid 2px black;
     text-align: justify;
-    h1{
+    > p {
+        font-size: 1.5em;
+    }
+    h1 {
         text-align: center;
     }
 }
 //-----------------------------------------------------
-.doctor-card{
+.doctor-card {
     margin: 1em;
 }
